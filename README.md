@@ -1,20 +1,22 @@
-# Next.js Backend API
+# Next.js Backend API (Vercel uchun)
 
-Bu loyiha Next.js va Vercel uchun tayyorlangan backend API hisoblanadi. CRUD (Create, Read, Update, Delete) funksiyalari mavjud.
+Bu loyiha Vercel platformasida ishlashi uchun tayyorlangan.
 
 ## O'rnatish va Ishga Tushirish
 
-1. **Node.js** o'rnatilganligiga ishonch hosil qiling.
-2. Quyidagi buyruqlarni ishga tushiring:
-
+1. **Node.js** o‘rnatilganligiga ishonch hosil qiling.
+2. Paketlarni o‘rnatish:
 ```sh
 npm install
+```
+3. Lokal serverni ishga tushirish:
+```sh
 npm run dev
 ```
 
 ## Vercelga Yuklash
 
-1. Vercel CLI'ni o'rnating:
+1. Vercel CLI'ni o‘rnating:
    ```sh
    npm install -g vercel
    ```
@@ -24,10 +26,12 @@ npm run dev
    ```
 3. Loyihani yuklang:
    ```sh
-   vercel
+   vercel --prod
    ```
 
-Shundan so'ng, API `https://your-vercel-app.vercel.app/api/worker` kabi ishlaydi.
+Shundan so‘ng API quyidagicha ishlaydi:
+- `https://your-vercel-app.vercel.app/api/worker`
+- `https://your-vercel-app.vercel.app/api/objects`
 
 ## API Endpointlar
 
@@ -36,4 +40,4 @@ Shundan so'ng, API `https://your-vercel-app.vercel.app/api/worker` kabi ishlaydi
 - **PUT** `/api/worker` - Ishchi ma’lumotlarini yangilash
 - **DELETE** `/api/worker` - Ishchini o‘chirish
 
-Boshqa endpointlar ham xuddi shu formatda ishlaydi.
+Barcha endpointlar bir xil formatda ishlaydi.
